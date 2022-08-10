@@ -1,0 +1,31 @@
+diff --git a/sound/sequences/00_sound_player.s b/sound/sequences/00_sound_player.s
+index e1297dad..cc14c642 100644
+--- a/sound/sequences/00_sound_player.s
++++ b/sound/sequences/00_sound_player.s
+@@ -7383,13 +7383,7 @@ chan_setvibratoextent 3
+ chan_setvibratorate 60
+ chan_setval 25
+ chan_call .set_reverb
+-chan_setlayer 0, .layer_2E28
+-chan_setlayer 1, .layer_2E3D
+-chan_setlayer 2, .layer_2E34
+-chan_setval 70
+-chan_call .delay
+-chan_setbank 10
+-chan_setinstr 8
++chan_setlayer 0, .layer_11E4
+ chan_end
+ 
+ .layer_2E28:
+diff --git a/src/menu/level_select_menu.c b/src/menu/level_select_menu.c
+index c178568d..14a0e616 100644
+--- a/src/menu/level_select_menu.c
++++ b/src/menu/level_select_menu.c
+@@ -206,6 +206,7 @@ int intro_game_over(void) {
+ int intro_play_its_a_me_mario(void) {
+     set_background_music(0, SEQ_SOUND_PLAYER, 0);
+     play_sound(SOUND_MENU_COIN_ITS_A_ME_MARIO, gDefaultSoundArgs);
++    r96_play_character_sound_no_arg(R96_MARIO_ITS_A_ME_MARIO, R96_LUIGI_ITS_A_ME_LUIGI, R96_WARIO_ITS_A_ME_WARIO);
+     return 1;
+ }
+ 
