@@ -17,6 +17,19 @@ index e1297dad..cc14c642 100644
  chan_end
  
  .layer_2E28:
+diff --git a/src/menu/file_select.c b/src/menu/file_select.c
+index c7b4d75b..25431762 100644
+--- a/src/menu/file_select.c
++++ b/src/menu/file_select.c
+@@ -1526,7 +1526,7 @@ void print_save_file_star_count(s8 fileIndex, s16 x, s16 y) {
+     }
+ }
+ 
+-#define SELECT_FILE_X 93
++#define SELECT_FILE_X 50
+ #define SCORE_X 52
+ #define COPY_X 117
+ #define ERASE_X 177
 diff --git a/src/menu/level_select_menu.c b/src/menu/level_select_menu.c
 index c178568d..14a0e616 100644
 --- a/src/menu/level_select_menu.c
