@@ -3688,7 +3688,7 @@
         "TEXT_FILE_MARIO_B": "MARIO B",
         "TEXT_FILE_MARIO_C": "MARIO C",
         "TEXT_FILE_MARIO_D": "MARIO D",
-        "TEXT_SCORE": "PONT.",
+        "TEXT_SCORE": "PONTUA{00199}{00195}O",
         "TEXT_COPY": "COPIAR",
         "TEXT_ERASE": "APAGAR",
         "TEXT_STEREO": "EST{00201}REO",

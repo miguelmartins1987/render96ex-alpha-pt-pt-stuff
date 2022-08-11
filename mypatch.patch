@@ -31,7 +31,7 @@ index 80169157..8264dcc7 100644
  }
  
 diff --git a/src/menu/file_select.c b/src/menu/file_select.c
-index c7b4d75b..2477f39c 100644
+index c7b4d75b..53afc156 100644
 --- a/src/menu/file_select.c
 +++ b/src/menu/file_select.c
 @@ -1526,10 +1526,10 @@ void print_save_file_star_count(s8 fileIndex, s16 x, s16 y) {
@@ -39,10 +39,11 @@ index c7b4d75b..2477f39c 100644
  }
  
 -#define SELECT_FILE_X 93
-+#define SELECT_FILE_X 50
- #define SCORE_X 52
+-#define SCORE_X 52
 -#define COPY_X 117
 -#define ERASE_X 177
++#define SELECT_FILE_X 50
++#define SCORE_X 39
 +#define COPY_X 113
 +#define ERASE_X 173
  #define SOUNDMODE_X1 sSoundTextX
