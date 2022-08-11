@@ -17,8 +17,21 @@ index e1297dad..cc14c642 100644
  chan_end
  
  .layer_2E28:
+diff --git a/src/game/ingame_menu.c b/src/game/ingame_menu.c
+index 80169157..8264dcc7 100644
+--- a/src/game/ingame_menu.c
++++ b/src/game/ingame_menu.c
+@@ -1629,7 +1629,7 @@ void render_pause_castle_main_strings(s16 x, s16 y) {
+         print_generic_string(x + 60, y + 13, strVal);
+     }
+ 
+-    print_generic_string(x - 9, y + 30, courseName);
++    print_generic_string(x - 26, y + 30, courseName);
+     gSPDisplayList(gDisplayListHead++, dl_ia_text_end);
+ }
+ 
 diff --git a/src/menu/file_select.c b/src/menu/file_select.c
-index c7b4d75b..afa467af 100644
+index c7b4d75b..2477f39c 100644
 --- a/src/menu/file_select.c
 +++ b/src/menu/file_select.c
 @@ -1526,10 +1526,10 @@ void print_save_file_star_count(s8 fileIndex, s16 x, s16 y) {
@@ -35,6 +48,62 @@ index c7b4d75b..afa467af 100644
  #define SOUNDMODE_X1 sSoundTextX
  #define SAVEFILE_X1 92
  #define SAVEFILE_X2 209
+@@ -1578,7 +1578,7 @@ void print_main_menu_strings(void) {
+     gSPDisplayList(gDisplayListHead++, dl_menu_ia8_text_end);
+ }
+ 
+-#define CHECK_FILE_X 95
++#define CHECK_FILE_X 100
+ #define NOSAVE_DATA_X1 99
+ 
+ /**
+@@ -1595,7 +1595,7 @@ void score_menu_display_message(s8 messageID) {
+     }
+ }
+ 
+-#define RETURN_X     44
++#define RETURN_X     35
+ #define COPYFILE_X1  135
+ #define ERASEFILE_X1 231
+ 
+@@ -1647,7 +1647,7 @@ void print_score_menu_strings(void) {
+ }
+ 
+ #define NOFILE_COPY_X  119
+-#define COPY_FILE_X    104
++#define COPY_FILE_X    105
+ #define COPYIT_WHERE_X 109
+ #define NOSAVE_DATA_X2 101
+ #define COPYCOMPLETE_X 110
+@@ -1836,7 +1836,7 @@ void print_erase_menu_prompt(s16 x, s16 y) {
+ //   US and EU   ---    JP
+ // M a r i o   A --- マ リ オ Ａ
+ // 0 1 2 3 4 5 6 --- 0 1 2 3
+-#define ERASE_FILE_X     98
++#define ERASE_FILE_X     64
+ #define NOSAVE_DATA_X3   100
+ #define MARIO_ERASED_VAR 6
+ #define MARIO_ERASED_X   100
+@@ -1853,7 +1853,7 @@ void erase_menu_display_message(s8 messageID) {
+             print_hud_lut_string_fade(HUD_LUT_DIFF, ERASE_FILE_X, 35, get_key_string("TEXT_ERASE_FILE"));
+             break;
+         case ERASE_MSG_PROMPT:
+-            print_generic_string_fade(90, 190, get_key_string("TEXT_SURE"));
++            print_generic_string_fade(70, 190, get_key_string("TEXT_SURE"));
+             print_erase_menu_prompt(90, 190); // YES NO, has functions for it too
+             break;
+         case ERASE_MSG_NOSAVE_EXISTS:
+@@ -1911,8 +1911,8 @@ void erase_menu_update_message(void) {
+     }
+ }
+ 
+-#define VIEWSCORE_X2 127
+-#define COPYFILE_X2 233
++#define VIEWSCORE_X2 132
++#define COPYFILE_X2 215
+ 
+ /**
+  * Prints erase menu strings that shows on the red background menu screen.
 diff --git a/src/menu/level_select_menu.c b/src/menu/level_select_menu.c
 index c178568d..14a0e616 100644
 --- a/src/menu/level_select_menu.c
